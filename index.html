@@ -5,13 +5,54 @@
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
     <link href="content/css/materialize.min.css" rel="stylesheet" type="text/css" />
     <script src="app/lib/angular.min.js"></script>
-    <script src="app/lib/materialize.min.js"></script>
     <script src="app/app.js"></script>
   </head>
   <body>
   <header ng-include ="'header.html'"></header>
   <div ng-controller="NinjaController">
-  <div class="row">
+    <div id="kaban">
+      <div id="scroller">
+        <div id="boards">
+
+          <div class="board" id="board1">
+            <header>Things To do</header>
+            <div class="cards" id="b1">
+              <div class="card" ng-repeat="ninja in ninjas" ng-show="ninja.available">
+                <span class="cardtitle noselect">{{ninja.name}}</span>
+              </div>
+              <form ng-submit="addNinja()">
+                <textarea placeholder="Enter" ng-model="newninja.name"></textarea>
+                  <input type="submit" value="+ Add new card" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="board" id="board2">
+            <header>Doing</header>
+            <div class="cards" id="b2">
+              <div class="card" ng-repeat="ninja in lattice" ng-show="ninja.available">
+                <span class="cardtitle">{{ninja.name}}</span>
+              </div>
+              <a href="#" >Add a card...</a>
+            </div>
+          </div>
+
+          <div class="board" id="board3">
+            <header>Done</header>
+            <div class="cards" id="b3">
+              <div class="card" ng-repeat="ninja in terllo" ng-show="ninja.available">
+                <span class="cardtitle noselect">{{ninja.name}}</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  <!-- <div class="row">
    <div class="col s3">
      <div class="card blue-grey darken-1">
        <div class="card-content white-text">
@@ -31,8 +72,9 @@
         </form>
      </div>
      </div>
-   </div>
-   <div class="col s3">
+   </div> -->
+
+   <!-- <div class="col s3">
      <div class="card blue-grey darken-1">
        <div class="card-content white-text">
          <span class="card-title">Doing </span>
@@ -51,8 +93,8 @@
          </form>
        </div>
      </div>
-   </div>
-   <div class="col s3">
+   </div> -->
+   <!-- <div class="col s3">
      <div class="card blue-grey darken-1">
        <div class="card-content white-text">
          <span class="card-title">Done</span>
@@ -75,7 +117,7 @@
    <div class="content">
      <input type="submit" value="+ Add another list" />
    </div>
- </div>
+ </div> -->
 </div>
 </body>
 </html>

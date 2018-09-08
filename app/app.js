@@ -34,22 +34,22 @@ myNinjaApp.controller('NinjaController',function($scope){
 
     $scope.ninjas = [
       {
-        name: "Backbone",
+        name: "Hey i'm Backbone",
         available: true
       },
       {
-        name: "Marrionate",
+        name: "you Marrionate",
         available: true
       },
       {
-        name: "React-Native",
+        name: "Hi, I a'm React-Native",
         available: true
 
       },
     ];
     $scope.lattice = [
       {
-        name: "Github",
+        name: "You boss---->Github",
         available: true
 
       },
