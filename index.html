@@ -33,7 +33,7 @@
             <div class="cards" id="b2">
               <div class="card" ng-repeat="ninja in lattice" ng-show="ninja.available">
                 <span class="cardtitle">{{ninja.name}}</span>
-                <div class="remove" ng-click="removeNinja(ninja)">x</div>
+                <div class="remove" ng-click="removeNinja1(ninja)">x</div>
               </div>
               <form ng-submit="addNinja1()">
                <input type=text ng-model="newninja1.name">
@@ -47,7 +47,7 @@
             <div class="cards" id="b3">
               <div class="card" ng-repeat="ninja in terllo" ng-show="ninja.available">
                 <span class="cardtitle noselect">{{ninja.name}}</span>
-                <div class="remove" ng-click="removeNinja(ninja)">x</div>
+                <div class="remove" ng-click="removeNinja2(ninja)">x</div>
               </div>
               <form ng-submit="addNinja2()">
                <input type=text ng-model="newninja2.name">
