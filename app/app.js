@@ -6,6 +6,15 @@ myNinjaApp.controller('NinjaController',function($scope){
      var removeNinja = $scope.ninjas.indexOf(ninja);
      $scope.ninjas.splice(removeNinja, 1);
    };
+     $scope.removeNinja1 = function(ninja) {
+     var removeNinja = $scope.lattice.indexOf(ninja);
+     $scope.lattice.splice(removeNinja, 1);
+   };
+   
+    $scope.removeNinja2 = function(ninja) {
+     var removeNinja = $scope.terllo .indexOf(ninja);
+     $scope.terllo .splice(removeNinja, 1);
+   };
 
    $scope.addNinja = function() {
       $scope.ninjas.push({
